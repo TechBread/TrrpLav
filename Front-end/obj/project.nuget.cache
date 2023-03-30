@@ -1,7 +1,9 @@
 {
   "version": 2,
+  "dgSpecHash": "JLWWnxzr6pgL/ltKeJ92sTEqfDbUPJTPfcc5FrccuENe7JGG9T+hN7+GK4GwvPOeDg/4FWIsElFehtqgaAbbJQ==",
   "dgSpecHash": "zaKyqnf6iHQmej5ZAj4YuMwz/2IbDqFhlhl7DYp8FopPYrwbQZEcGu6vOzydy18rmdp4703E/LQ4318fgSkkBg==",
   "success": true,
+  "projectFilePath": "C:\\Users\\PC\\Source\\Repos\\TRRP_lab4\\Front-end\\Front-end.csproj",
   "projectFilePath": "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\Front-end.csproj",
   "expectedPackageFiles": [],
   "logs": []
