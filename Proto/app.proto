@@ -15,5 +15,5 @@ message UserRequest {
 }
 
 message Status{
-	bool status = 1;
+	bool stat = 1;
 }

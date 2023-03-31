@@ -5,7 +5,7 @@ using Npgsql;
 using System.Configuration;
 using System.Linq;
 using UserServ;
-
+using Status = UserServ.Status;
 
 namespace MainServer
 {
@@ -29,7 +29,7 @@ namespace MainServer
 
 			
 			users.Add(user);
-			return new UserServ.Status { Status_ = status };
+			return new UserServ.Status { Stat = status };
 		}
 
 		public override async Task GetUsers(UserRequest request, IServerStreamWriter<UserRequest> responseStream, ServerCallContext context)
@@ -50,6 +50,13 @@ namespace MainServer
 			return base.StartGame(request, context);
 		}
 
+		public override async Task<UserServ.Status> LogOut(UserRequest request, ServerCallContext context)
+		{
+			var user = new User(request.Username, request.Username);
+			bool v = users.Remove(users.Find(x => x.Equals(user)));
+
+			return new Status { Stat = v };
+		}
 
 		private bool addUserDb(User user)
 		{
