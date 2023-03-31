@@ -15,7 +15,6 @@ internal class Program
 		{
 			Services = { UserWork.BindService(new UserServiceRealization()),},
 			Ports = {new Grpc.Core.ServerPort(host, port, Grpc.Core.ServerCredentials.Insecure)},
-
 		};
 
 		server.Start();

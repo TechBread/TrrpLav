@@ -3,13 +3,17 @@
 package UserServ;
 
 service UserWork {
-	rpc Auth (UserRequest) returns (UsersStatus) {} 
+	rpc Auth (UserRequest) returns (Status) {}
+	rpc GetUsers (UserRequest) returns (stream UserRequest) {}
+	rpc LogOut (UserRequest) returns (Status) {}
+	rpc StartGame (UserRequest) returns (Status) {}
 }
 
 message UserRequest {
 	string username = 1;
+	string ip = 2;
 }
 
-message UsersStatus{
+message Status{
 	bool status = 1;
 }
