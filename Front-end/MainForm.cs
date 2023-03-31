@@ -28,9 +28,9 @@ namespace Front_end
 			//get from DB
 			users.Clear();
 			playersLb.Clear();
-			users.Add(new User("Shalava"));
-			users.Add(new User("Shalupon'"));
-			users.Add(new User("Daun ebaniy"));
+			users.Add(new User("User1"));
+			users.Add(new User("User2"));
+			users.Add(new User("User3"));
 			foreach(var user in users)
 			{
 				playersLb.Items.Add(user.userName);

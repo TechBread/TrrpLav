@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\Front-end.csproj": {}
+    "C:\\Users\\PC\\source\\repos\\TRRP_lab4\\Front-end\\Front-end.csproj": {}
   },
   "projects": {
-    "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\Front-end.csproj": {
+    "C:\\Users\\PC\\source\\repos\\TRRP_lab4\\Front-end\\Front-end.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\Front-end.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\source\\repos\\TRRP_lab4\\Front-end\\Front-end.csproj",
         "projectName": "Front-end",
-        "projectPath": "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\Front-end.csproj",
-        "packagesPath": "C:\\Users\\olyg4\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\olyg4\\Desktop\\TRRP_Lab4\\TRRP_lab4\\Front-end\\obj\\",
+        "projectPath": "C:\\Users\\PC\\source\\repos\\TRRP_lab4\\Front-end\\Front-end.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\source\\repos\\TRRP_lab4\\Front-end\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\olyg4\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -63,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
