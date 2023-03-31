@@ -25,5 +25,10 @@ namespace Front_end
 			//Learn from DB
 			return false;
 		}
+
+		private void loginTb_TextChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

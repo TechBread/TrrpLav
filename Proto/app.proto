@@ -1,0 +1,15 @@
+﻿syntax = "proto3";
+
+package UserServ;
+
+service UserWork {
+	rpc Auth (UserRequest) returns (UsersStatus) {} 
+}
+
+message UserRequest {
+	string username = 1;
+}
+
+message UsersStatus{
+	bool status = 1;
+}

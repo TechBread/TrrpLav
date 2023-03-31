@@ -10,9 +10,22 @@ namespace Front_end
 	public class User
 	{
 		public string userName { get; set; }
+		public bool Status { get; private set; }
 		public User(string userName)
 		{
 			this.userName = userName;
+		}
+		
+		public bool setOffline()
+		{
+			Status = false;
+			return Status;
+		}
+
+		public bool setOnline()
+		{
+			Status=true;
+			return Status;
 		}
 
 	}

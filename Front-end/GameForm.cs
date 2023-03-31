@@ -67,5 +67,10 @@ namespace Front_end
         {
             //write code
         }
+
+        private void GameForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
