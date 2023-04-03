@@ -39,7 +39,7 @@ namespace MainServer
 			var tempRequest = new List<UserRequest>();
 			foreach (var item in temp)
 			{
-				tempRequest.Add(new UserRequest(item.userName, item.ip));
+				//tempRequest.Add(new UserRequest(item.userName, item.ip));
 			}
 			
 			await responseStream.WriteAllAsync(tempRequest);

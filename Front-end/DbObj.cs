@@ -6,13 +6,15 @@ using System.Net.Sockets;
 using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json.Serialization;
 
 namespace Front_end
 {
+	[Serializable]
 	public class User
 	{
 		public string userName { get; set; }
-		public bool Status { get; private set; }
+		public bool Status { get; set; }
 		public string ip { get; set; }
 		public User(string userName)
 		{
@@ -21,6 +23,13 @@ namespace Front_end
 		public User(string userName, string ip)
 		{
 			this.userName = userName;
+			this.ip = ip;
+		}
+		[JsonConstructor]
+		public User(string userName, bool status, string ip)
+		{
+			this.userName = userName;
+			this.Status = status;
 			this.ip = ip;
 		}
 
@@ -59,20 +68,25 @@ namespace Front_end
 			return false;
 		}
 	}
+	[Serializable]
 	public class GameInfo
 	{
 		public User fPlayer { get; set; }
 		public User sPlayer { get; set; }
         public User winner { get; set; }
-        public string winTime { get; set; }
+		public string startTime { get; set; }
+        public string fTime { get; set; }
+		public string  sTime { get; set; }
         public int fMoveCount { get; set; }
         public int sMoveCount { get; set; }
-		public GameInfo(User fPlayer, User sPlayer, User winner, string winTime, int fMoveCount, int sMoveCount)
+		public GameInfo(User fPlayer, User sPlayer, User winner,string startTime, string fTime, string sTime, int fMoveCount, int sMoveCount)
 		{
 			this.fPlayer = fPlayer;
 			this.sPlayer = sPlayer;
 			this.winner = winner;
-			this.winTime = winTime;
+			this.startTime = startTime;
+			this.sTime = sTime;
+			this.fTime = fTime;
 			this.fMoveCount = fMoveCount;
 			this.sMoveCount = sMoveCount;
 		}

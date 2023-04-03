@@ -16,9 +16,11 @@ namespace Front_end
 		private User curUser;
 		private List<User> users = new List<User>();
 		private List<GameInfo> history = new List<GameInfo>();
-		public MainForm(User curUser)
+		private StartForm sf;
+		public MainForm(User curUser, StartForm sf)
 		{ 
 			this.curUser = curUser;
+			this.sf = sf;
 			InitializeComponent();
 			getUsers();
 			getGamesInfo();
@@ -41,9 +43,9 @@ namespace Front_end
 			//get from DB
 			history.Clear();
 			historyLb.Clear();
-			history.Add(new GameInfo(users[0], users[1], users[0], "3:23", 5, 8));
-            history.Add(new GameInfo(users[2], users[0], users[2], "5:01", 6, 7));
-            history.Add(new GameInfo(users[2], users[1], users[1], "1:11", 4, 3));
+			history.Add(new GameInfo(users[0], users[1], users[0], "0:00", "3:23", "2:34", 5, 8));
+            history.Add(new GameInfo(users[2], users[0], users[2], "0:00", "5:01", "2:22", 6, 7));
+            history.Add(new GameInfo(users[2], users[1], users[1], "0:00", "1:11", "3:33", 4, 3));
 			foreach(var gi in history)
 			{
 				historyLb.Items.Add(gi.ToString());
@@ -58,8 +60,9 @@ namespace Front_end
 			}
 			else if(isPlayerAccept())
 			{
-				GameForm gf = new GameForm(playersLb.SelectedItems[0].Text);
-				gf.ShowDialog();
+				GameForm gf = new GameForm(playersLb.SelectedItems[0].Text, curUser, this);
+                this.Visible = false;
+                gf.ShowDialog();
 			}
 			//sendInvite
 		}
@@ -81,8 +84,9 @@ namespace Front_end
 			else
 			{
 				var selItem = (GameInfo)historyLb.SelectedItems[0].Tag;
-				string info = "Winner: " + selItem.winner.userName + "\nGame duration: " + selItem.winTime +
-					"\n" + selItem.fPlayer.userName + " move count: " + selItem.fMoveCount + "\n" + selItem.sPlayer.userName + " move count: " + selItem.sMoveCount;
+				string info = "Winner: " + selItem.winner.userName + "\n" + selItem.fPlayer.userName + "game duration: " + selItem.fTime + "\n" + 
+					selItem.sPlayer.userName + "game duration: " + selItem.sTime +
+                    "\n" + selItem.fPlayer.userName + " move count: " + selItem.fMoveCount + "\n" + selItem.sPlayer.userName + " move count: " + selItem.sMoveCount;
 				MessageBox.Show(info, "Game players: " + selItem.ToString());
 			}
 		}
@@ -90,6 +94,11 @@ namespace Front_end
 		private void refreshHistoryBtn_Click(object sender, EventArgs e)
 		{
 			getGamesInfo();
+		}
+
+		private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			sf.Visible = true;
 		}
 	}
 }

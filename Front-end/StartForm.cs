@@ -13,8 +13,9 @@ namespace Front_end
 			if (isNewUser(loginTb.Text))
 				addUserToDB(loginTb.Text);
 			User curUser = new User(loginTb.Text);
-			MainForm mf = new MainForm(curUser);
-			mf.ShowDialog();
+			MainForm mf = new MainForm(curUser, this);
+            Visible = false;
+            mf.ShowDialog();
 		}
 		private void addUserToDB(string username)
 		{

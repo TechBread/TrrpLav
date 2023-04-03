@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Front_end
 {
+    [Serializable]
     internal class GameData
     {
         public int moveCount { get; set; }

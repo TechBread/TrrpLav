@@ -137,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "InfoForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

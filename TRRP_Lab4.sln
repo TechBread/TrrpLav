@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Proto", "Proto\Proto.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MainServer", "MainServer\MainServer.csproj", "{9B49705E-DF48-4241-B073-310DF21816BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HistoryServer", "HistoryServer\HistoryServer.csproj", "{3954BDDF-F714-476E-A9F8-06414486F20C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{9B49705E-DF48-4241-B073-310DF21816BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B49705E-DF48-4241-B073-310DF21816BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B49705E-DF48-4241-B073-310DF21816BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3954BDDF-F714-476E-A9F8-06414486F20C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3954BDDF-F714-476E-A9F8-06414486F20C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3954BDDF-F714-476E-A9F8-06414486F20C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3954BDDF-F714-476E-A9F8-06414486F20C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
